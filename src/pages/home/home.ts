@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
 import { HeroesPage } from '../heroes/heroes';
 
 @Component({
@@ -7,13 +6,5 @@ import { HeroesPage } from '../heroes/heroes';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
-  }
-
-  onLoadHeroes(){
-    this.navCtrl.push(HeroesPage);
-  }
-
+  lienVersHeroesPage = HeroesPage;
 }

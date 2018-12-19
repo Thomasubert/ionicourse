@@ -8,13 +8,17 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HeroesPage } from '../pages/heroes/heroes';
 import { SingleHeroPage } from '../pages/heroes/single-hero/single-hero';
+import { ProfilPage } from '../pages/profil/profil';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     HeroesPage,
-    SingleHeroPage
+    SingleHeroPage,
+    ProfilPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,12 @@ import { SingleHeroPage } from '../pages/heroes/single-hero/single-hero';
     MyApp,
     HomePage,
     HeroesPage,
-    SingleHeroPage
+    SingleHeroPage,
+    ProfilPage,
+    TabsPage
+    
+    
+    
   ],
   providers: [
     StatusBar,
