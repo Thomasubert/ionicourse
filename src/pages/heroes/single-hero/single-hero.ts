@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams } from 'ionic-angular';
+import { Hero } from '../../../models/Hero';
+import { HeroesService } from '../../../services/heroes.service';
 
 /**
  * Generated class for the SingleHeroPage page.
@@ -14,13 +16,17 @@ import { NavParams } from 'ionic-angular';
 })
 export class SingleHeroPage implements OnInit{
 
-  name: string;
+  index: number;
+  hero: Hero;
 
-  constructor(public navParams: NavParams) {
+  constructor(public navParams: NavParams,
+              private heroesService: HeroesService) {
   }
 
   ngOnInit(){
-    this.name = this.navParams.get('heroName')
+    this.index = this.navParams.get('index');
+    this.hero = this.heroesService.heroesList[this.index];
+    console.log(this.hero);
 
   }
 
